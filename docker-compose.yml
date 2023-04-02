@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+    mysql:
+        image: mysql
+        environment:
+            - MYSQL_USER=kartaca
+            - MYSQL_PASSWORD=kartaca
+            - MYSQL_DATABASE=airflow
+            - MYSQL_ROOT_PASSWORD=kartaca
+        ports:
+            - "3306:3306"
+        networks:
+            - backend
+    scheduler:
+        image: apache/airflow:2.5.3
+        command: scheduler
+        depends_on:
+            - mysql
+        env_file:
+            - .env
+        volumes:
+            - ./dags:/opt/airflow/dags
+            - ./logs:/opt/airflow/logs
+        networks:
+            - backend
+    webserver:
+        image: apache/airflow:2.5.3
+        entrypoint: ./scripts/entrypoint.sh
+        depends_on:
+            - mysql
+            - scheduler
+        env_file:
+            - .env
+        volumes:
+            - ./dags:/opt/airflow/dags
+            - ./logs:/opt/airflow/logs
+            - ./scripts:/opt/airflow/scripts
+        ports:
+            - "8080:8080"
+networks:
+  backend:
+    driver: "bridge"
