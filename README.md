@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
-  <a href="https://airflow.apache.org/images/feature-image.png">
-    <img src="" alt="Logo" width="400" height="400">
+  <a href="https://github.com/erkutkoral/DockerProject/">
+    <img src="https://airflow.apache.org/images/feature-image.png" alt="Logo" width="400" height="400">
   </a>
 
   <h3 align="center">Creating pipeline with Airflow for importing data to SQL</h3>
