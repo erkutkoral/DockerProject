@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/erkutkoral/DockerProject">
+  <a href="https://airflow.apache.org/images/feature-image.png">
     <img src="" alt="Logo" width="400" height="400">
   </a>
 
