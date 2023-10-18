@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/erkutkoral/DockerProject/">
-    <img src="https://airflow.apache.org/images/feature-image.png" alt="Logo" width="400" height="400">
+    <img src="https://airflow.apache.org/images/feature-image.png" alt="Logo" width="400" height="200">
   </a>
 
   <h3 align="center">Creating pipeline with Airflow for importing data to SQL</h3>
@@ -15,9 +15,7 @@
 * [Authors](#authors)
 
 ## About The Project
-<a href="https://airflow.apache.org/images/feature-image.png">
-    <img src="" alt="Logo" width="400" height="400">
-  </a>
+![About the Project](https://dev.mysql.com/blog-archive/mysqlhighavailability/wp-content/uploads/2018/10/mysql_docker_2.png)
 - As someone interested in data science, an airflow trigger was created that loaded the data into MySQL and performed certain operations on certain dates. 
 - Docker structure was used to share this structure.
 #### Technologies-Libraries-Frameworks
